@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
@@ -80,7 +81,7 @@ namespace PlayerIOExportTool
             try
             {
                 developer = await AutoPIO.LoginAsync(username, password);
-                log.Information("Signed in as: " + developer.Username + "(" + developer.Email + ")");
+                log.Information("Signed in as: " + developer.Username + " (" + developer.Email + ")");
             }
             catch
             {
